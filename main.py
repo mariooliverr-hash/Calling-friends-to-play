@@ -3,37 +3,37 @@ import time
 import os
 import pyperclip
 
-def jogodouser():
-    jogo = input("Qual jogo você quer jogar ?")
+def gameuser():
+    game = input("Which game do you want to play?")
     pyautogui.press("win")
     time.sleep(1)
-    pyautogui.write(jogo)
+    pyautogui.write(game) #Write the name of the game the user is going to play.
     time.sleep(1)
-    pyautogui.press("enter")
+    pyautogui.press("enter") 
 
 def party():
-    friendss = input('Qual amigo você quer chamar para a party ?')
+    friends = input('Which friend do you want to invite to the party?')
     pyautogui.press("win")
     time.sleep(1)
-    pyautogui.write("WhatsApp")
+    pyautogui.write("WhatsApp") #Open WhatsApp.
     time.sleep(1)
-    pyautogui.press("Enter")
+    pyautogui.press("enter")
     time.sleep(1)
     pyautogui.click(x=171, y=120)
     time.sleep(1)
-    pyperclip.copy(friendss)
-    pyautogui.hotkey("ctrl", "v")
+    pyperclip.copy(friends) #Copy the friend's name from the user.
+    pyautogui.hotkey("ctrl", "v") #Paste the friend's name that the user wants to invite to the party.
     time.sleep(1)
     pyautogui.click(x=221, y=170)
     time.sleep(1)
     pyautogui.click(x=803, y=827)
     time.sleep(1)
-    pyautogui.write("Vamos jogar")
+    pyautogui.write("Let's play") #Send the message inviting the friend to the party.
     time.sleep(1)
-
+    pyautogui.press("enter") #Send the message.
 while True:
     os.system("cls")
-    jogodouser()
+    gameuser()
     party()
 
     
