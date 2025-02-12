@@ -31,9 +31,7 @@ def party():
     pyautogui.write("Let's play") #Send the message inviting the friend to the party.
     time.sleep(1)
     pyautogui.press("enter") #Send the message.
-while True:
-    os.system("cls")
+while True: 
+    os.system("cls") #Loop running so that the previous commands are erased.
     gameuser()
     party()
-
-    
